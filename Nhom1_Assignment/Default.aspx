@@ -15,7 +15,7 @@
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Nhom1_AssignmentConnectionString %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [HoTen], [DiaChi], [SDT]) VALUES (@MaKH, @HoTen, @DiaChi, @SDT)" SelectCommand="SELECT [MaKH], [HoTen], [DiaChi], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SDT] = @SDT WHERE [MaKH] = @MaKH">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Nhom1_AssignmentConnectionString2 %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [HoTen], [DiaChi], [SDT]) VALUES (@MaKH, @HoTen, @DiaChi, @SDT)" SelectCommand="SELECT [MaKH], [HoTen], [DiaChi], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SDT] = @SDT WHERE [MaKH] = @MaKH">
                 <DeleteParameters>
                     <asp:Parameter Name="MaKH" Type="String" />
                 </DeleteParameters>
