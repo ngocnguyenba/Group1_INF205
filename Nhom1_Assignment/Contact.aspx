@@ -27,12 +27,10 @@
         </header>
         <p>
             <span class="label">Hỗ trợ:</span>
-            <span><a href="#">Support@gamil.com</a></span>
+            <span><a href="#">ngocnbph</a>04194@fpt.edu.vn</span>
         </p>
         <p>
-            <span class="label">Marketing:</span>
-            <span><a href="#">Marketing@gmail.com</a></span>
-        </p>
+            <span class="label">Marketing:</span> <a href="#">duongnhph0421</a>9@fpt.edu.vn</p>
         
     </section>
 
