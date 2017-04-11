@@ -7,14 +7,16 @@
                 <h1>Khách hàng</h1>
                 </hgroup>
                 <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaKH" DataSourceID="SqlDataSource1">
-                <Fields>
-                    <asp:BoundField DataField="MaKH" HeaderText="MaKH" ReadOnly="True" SortExpression="MaKH" />
-                    <asp:BoundField DataField="HoTen" HeaderText="HoTen" SortExpression="HoTen" />
-                    <asp:BoundField DataField="DiaChi" HeaderText="DiaChi" SortExpression="DiaChi" />
-                    <asp:BoundField DataField="SDT" HeaderText="SDT" SortExpression="SDT" />
-                </Fields>
+                    <Fields>
+                        <asp:BoundField DataField="MaKH" HeaderText="MaKH" ReadOnly="True" SortExpression="MaKH" />
+                        <asp:BoundField DataField="HoTen" HeaderText="HoTen" SortExpression="HoTen" />
+                        <asp:BoundField DataField="DiaChi" HeaderText="DiaChi" SortExpression="DiaChi" />
+                        <asp:BoundField DataField="SDT" HeaderText="SDT" SortExpression="SDT" />
+                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    </Fields>
             </asp:DetailsView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Nhom1_AssignmentConnectionString %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [HoTen], [DiaChi], [SDT]) VALUES (@MaKH, @HoTen, @DiaChi, @SDT)" SelectCommand="SELECT [MaKH], [HoTen], [DiaChi], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SDT] = @SDT WHERE [MaKH] = @MaKH">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [HoTen], [DiaChi], [SDT]) VALUES (@MaKH, @HoTen, @DiaChi, @SDT)" SelectCommand="SELECT [MaKH], [HoTen], [DiaChi], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SDT] = @SDT WHERE [MaKH] = @MaKH">
                 <DeleteParameters>
                     <asp:Parameter Name="MaKH" Type="String" />
                 </DeleteParameters>
