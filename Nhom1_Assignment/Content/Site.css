@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+#map_canvas {
+           width: 99%;
+           height: 200px;
+           border:solid 1px #ccc;
+       }
+
+
+Read more: http://thuyk.com/article/tich-hop-google-maps-vao-website-211#ixzz4dllW7CVO
 
 body {
     background-color: #fff;
