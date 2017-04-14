@@ -72,8 +72,29 @@
         </li>
         <li class="two">
             <h5>Hóa Đơn</h5>
-            
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245147">Learn more…</a>
+            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaHD" DataSourceID="SqlDataSource3">
+                <Fields>
+                    <asp:BoundField DataField="MaHD" HeaderText="MaHD" ReadOnly="True" SortExpression="MaHD" />
+                    <asp:BoundField DataField="SoHD" HeaderText="SoHD" SortExpression="SoHD" />
+                    <asp:BoundField DataField="KhachHang_MaKH" HeaderText="KhachHang_MaKH" SortExpression="KhachHang_MaKH" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                </Fields>
+            </asp:DetailsView>
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [HoaDon] WHERE [MaHD] = @MaHD" InsertCommand="INSERT INTO [HoaDon] ([MaHD], [SoHD], [KhachHang_MaKH]) VALUES (@MaHD, @SoHD, @KhachHang_MaKH)" SelectCommand="SELECT [MaHD], [SoHD], [KhachHang_MaKH] FROM [HoaDon]" UpdateCommand="UPDATE [HoaDon] SET [SoHD] = @SoHD, [KhachHang_MaKH] = @KhachHang_MaKH WHERE [MaHD] = @MaHD">
+                <DeleteParameters>
+                    <asp:Parameter Name="MaHD" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="MaHD" Type="String" />
+                    <asp:Parameter Name="SoHD" Type="String" />
+                    <asp:Parameter Name="KhachHang_MaKH" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="SoHD" Type="String" />
+                    <asp:Parameter Name="KhachHang_MaKH" Type="String" />
+                    <asp:Parameter Name="MaHD" Type="String" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
         </li>
         <li class="three">
             <h5>Find Web Hosting</h5>
