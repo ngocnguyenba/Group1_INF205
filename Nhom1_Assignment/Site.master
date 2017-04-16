@@ -45,8 +45,8 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Đăng Ký</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Đăng Nhập</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -61,9 +61,9 @@
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li><a runat="server" href="~/">Trang Chủ</a></li>
+                        <li><a runat="server" href="~/About.aspx">Thông Tin</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Liên Hệ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -78,7 +78,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application
+                <p>&copy; <%: DateTime.Now.Year %> -Nhóm 1
                 </p>
             </div>
         </div>
