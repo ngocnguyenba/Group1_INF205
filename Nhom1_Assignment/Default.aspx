@@ -6,7 +6,7 @@
     <ol class="round">
         <li class="one">
             <h5>Sản Phẩm</h5>
-            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaSP" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="260px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaSP" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <CommandRowStyle BackColor="#FFFFC0" Font-Bold="True" />
                 <FieldHeaderStyle BackColor="#FFFF99" Font-Bold="True" />
@@ -42,7 +42,7 @@
         </li>
         <li class="two">
             <h5>Hóa Đơn</h5>
-            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaHD" DataSourceID="SqlDataSource3" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="245px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaHD" DataSourceID="SqlDataSource3" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
                 <EditRowStyle BackColor="#7C6F57" />
@@ -76,7 +76,7 @@
         </li>
         <li class="three">
             <h5>Chi Tiết Hóa Đơn</h5>
-            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaCTHD" DataSourceID="SqlDataSource4" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="284px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaCTHD" DataSourceID="SqlDataSource4" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <CommandRowStyle BackColor="#FFFFC0" Font-Bold="True" />
                 <FieldHeaderStyle BackColor="#FFFF99" Font-Bold="True" />
@@ -115,7 +115,7 @@
 
         <li class="four">
             <h4>Khách hàng</h4>
-           <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaKH" DataSourceID="SqlDataSource1" Height="50px" Width="125px" CellPadding="4" ForeColor="#333333" GridLines="None">
+           <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaKH" DataSourceID="SqlDataSource1" Height="50px" Width="323px" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
                 <EditRowStyle BackColor="#7C6F57" />
@@ -133,23 +133,6 @@
                 <RowStyle BackColor="#E3EAEB" />
             </asp:DetailsView>
           
-            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [CTHoaDon] WHERE [MaCTHD] = @MaCTHD" InsertCommand="INSERT INTO [CTHoaDon] ([MaCTHD], [SoLuong], [SanPham_MaSP], [HoaDon_MaHD]) VALUES (@MaCTHD, @SoLuong, @SanPham_MaSP, @HoaDon_MaHD)" SelectCommand="SELECT [MaCTHD], [SoLuong], [SanPham_MaSP], [HoaDon_MaHD] FROM [CTHoaDon]" UpdateCommand="UPDATE [CTHoaDon] SET [SoLuong] = @SoLuong, [SanPham_MaSP] = @SanPham_MaSP, [HoaDon_MaHD] = @HoaDon_MaHD WHERE [MaCTHD] = @MaCTHD">
-                <DeleteParameters>
-                    <asp:Parameter Name="MaCTHD" Type="String" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="MaCTHD" Type="String" />
-                    <asp:Parameter Name="SoLuong" Type="Int32" />
-                    <asp:Parameter Name="SanPham_MaSP" Type="String" />
-                    <asp:Parameter Name="HoaDon_MaHD" Type="String" />
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="SoLuong" Type="Int32" />
-                    <asp:Parameter Name="SanPham_MaSP" Type="String" />
-                    <asp:Parameter Name="HoaDon_MaHD" Type="String" />
-                    <asp:Parameter Name="MaCTHD" Type="String" />
-                </UpdateParameters>
-            </asp:SqlDataSource>
               <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [DiaChi], [HoTen], [SDT]) VALUES (@MaKH, @DiaChi, @HoTen, @SDT)" SelectCommand="SELECT [MaKH], [DiaChi], [HoTen], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [DiaChi] = @DiaChi, [HoTen] = @HoTen, [SDT] = @SDT WHERE [MaKH] = @MaKH">
                 <DeleteParameters>
                     <asp:Parameter Name="MaKH" Type="String" />
@@ -166,8 +149,42 @@
                     <asp:Parameter Name="SDT" Type="Int32" />
                     <asp:Parameter Name="MaKH" Type="String" />
                 </UpdateParameters>
+            </asp:SqlDataSource>         
+        </li>
+
+        <li class="five">
+            <h4>Loại Sản Phẩm</h4>
+            <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="265px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="MaLSP" DataSourceID="SqlDataSource5">
+                <AlternatingRowStyle BackColor="#99FF66" />
+                <CommandRowStyle BackColor="#009900" Font-Bold="True" />
+                <EditRowStyle BackColor="#66FFCC" />
+                <FieldHeaderStyle BackColor="#33CC33" Font-Bold="True" />
+                <Fields>
+                    <asp:BoundField DataField="MaLSP" HeaderText="Mã Loại Sản Phẩm" ReadOnly="True" SortExpression="MaLSP" />
+                    <asp:BoundField DataField="TenLSP" HeaderText="Tên Loại Sản Phẩm" SortExpression="TenLSP" />
+                    <asp:BoundField DataField="ThuocTinh" HeaderText="Thuộc tính" SortExpression="ThuocTinh" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" EditText="Sửa" DeleteText="Xóa" NewText="Thêm" />
+                </Fields>
+                <FooterStyle BackColor="#33CC33" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#99FF99" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#009900" Font-Bold="True" ForeColor="White" />
+                <RowStyle BackColor="#CCFF99" />
+            </asp:DetailsView>
+            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [LoaiSP] WHERE [MaLSP] = @MaLSP" InsertCommand="INSERT INTO [LoaiSP] ([MaLSP], [TenLSP], [ThuocTinh]) VALUES (@MaLSP, @TenLSP, @ThuocTinh)" SelectCommand="SELECT [MaLSP], [TenLSP], [ThuocTinh] FROM [LoaiSP]" UpdateCommand="UPDATE [LoaiSP] SET [TenLSP] = @TenLSP, [ThuocTinh] = @ThuocTinh WHERE [MaLSP] = @MaLSP">
+                <DeleteParameters>
+                    <asp:Parameter Name="MaLSP" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="MaLSP" Type="String" />
+                    <asp:Parameter Name="TenLSP" Type="String" />
+                    <asp:Parameter Name="ThuocTinh" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="TenLSP" Type="String" />
+                    <asp:Parameter Name="ThuocTinh" Type="String" />
+                    <asp:Parameter Name="MaLSP" Type="String" />
+                </UpdateParameters>
             </asp:SqlDataSource>
-          
         </li>
     </ol>
 </asp:Content>

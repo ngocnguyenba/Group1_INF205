@@ -78,7 +78,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> -Nhóm 1
+                <p>&copy; <%: DateTime.Now.Year %> - INF205 - Group 1 
                 </p>
             </div>
         </div>
