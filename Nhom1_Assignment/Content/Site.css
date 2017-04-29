@@ -42,10 +42,11 @@ a {
 header, footer, hgroup,
 nav, section {
     display: block;
+    background-color: #ffffff !important;
 }
 
 mark {
-    background-color: #a6dbed;
+  background-color: #ffffff !important;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -103,10 +104,11 @@ h5, h6 {
 .content-wrapper {
     margin: 0 auto;
     max-width: 960px;
+    background-color: #ffffff !important;
 }
 
 #body {
-    background-color: #efeeef;
+    background-color: #ffffff !important;
     clear: both;
     padding-bottom: 35px;
 }
@@ -161,7 +163,7 @@ footer {
 }
 
     #login a {
-        background-color: #d3dce0;
+       background-color: #ffffff !important;
         margin-left: 10px;
         margin-right: 3px;
         padding: 2px 3px;
