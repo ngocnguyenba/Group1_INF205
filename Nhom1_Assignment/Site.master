@@ -38,7 +38,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <asp:Image ImageUrl="~/Images/polo-logo.jpg" runat="server" Height="109px" Width="128px" /></p>
+                    <asp:Image ImageUrl="~/Images/salla-logo.jpg" runat="server" Height="109px" Width="128px" /></p>
             </div>
             <div class="float-right">
                 <section id="login">
